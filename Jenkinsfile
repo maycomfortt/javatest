@@ -29,6 +29,10 @@ pipeline {
       stage('Build and Push Image') {
          steps {
            sh 'docker image build -t ${REPOSITORY_TAG} .'
+         //   sh 'docker logout'
+         //   sh 'echo $dockerhub_PSW | docker login -u $dockerhub_USR --password-stdin'
+         //   sh 'docker tag jenkins/jenkins:lts-jdk11 $dockerhub_USR/${REPOSITORY_TAG}'
+         //   sh 'docker push $dockerhub_USR/${REPOSITORY_TAG}'
          }
       }
 
