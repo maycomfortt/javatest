@@ -2,7 +2,7 @@ pipeline {
    agent any
      tools { 
       maven 'marven-3.8.6' 
-      jdk 'JAVA_HOME' 
+      jdk 'JDK' 
     }
    environment {
      // You must set the following environment variables
